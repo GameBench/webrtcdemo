@@ -17,6 +17,9 @@ class MainActivity : AppCompatActivity() {
             GameBench.setToken(HEX_TOKEN)
             GameBench.setAutoSessionEnabled(true)
             GameBench.setVerboseLoggingEnabled(true)
+            GameBench.setMetricInterval("CPU", 1.0f)
+            GameBench.setMetricInterval("MEM", 1.0f)
+            GameBench.setMetricInterval("GPU", 1.0f)
         }
     }
 
