@@ -5,14 +5,14 @@ plugins {
 
 android {
     namespace 'net.gamebench.webrtcdemo'
-    compileSdk 33
+    compileSdk 34
 
     defaultConfig {
         applicationId "net.gamebench.webrtcdemo"
-        minSdk 24
-        targetSdk 33
-        versionCode 1
-        versionName "1.0"
+        minSdk 34
+        targetSdk 34
+        versionCode 2
+        versionName "1.01"
     }
 
 
@@ -37,5 +37,5 @@ dependencies {
     implementation 'com.google.android.material:material:1.9.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
 
-    implementation files('lib/GameBench.aar')
+    implementation project(":GameBench")
 }

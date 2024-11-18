@@ -6,12 +6,78 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <WebView
-        android:id="@+id/webView"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="378dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="48dp"
+        android:text="GameBench WebRTC Test"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/xbox"
+        android:layout_width="266dp"
+        android:layout_height="97dp"
+        android:layout_marginTop="16dp"
+        android:contentDescription="Xbox Live"
+        android:onClick="xboxClicked"
+        android:scaleType="centerInside"
+        android:src="@drawable/xbox_live_logo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageButton
+        android:id="@+id/geforce"
+        android:layout_width="266dp"
+        android:layout_height="97dp"
+        android:layout_marginTop="16dp"
+        android:contentDescription="Geforce Now"
+        android:onClick="geforceClicked"
+        android:scaleType="centerInside"
+        android:src="@drawable/nvidia"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/xbox"
+        app:layout_constraintVertical_bias="0.0" />
+
+
+    <ToggleButton
+        android:id="@+id/boost"
+        android:layout_width="140dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="40dp"
+        android:textOff="5G Boost OFF"
+        android:textOn="5G Boost ON"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/geforce"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/boost_status"
+        android:layout_width="428dp"
+        android:layout_height="322dp"
+        android:layout_marginTop="15dp"
+        android:background="#F0F0F0"
+        android:maxLines="100"
+        android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/boost" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
